@@ -17,7 +17,7 @@ import java.time.Duration;
 public class MainTest {
     private final String login = "nowaj54360@lubde.com";
     private final String password = "Nowaj54360@lubde.com";
-    WebDriver driver;
+    private WebDriver driver;
 
     @AfterEach
     public void close() {
@@ -80,7 +80,7 @@ public class MainTest {
 
     private void checkResult() {
         String expectedResult = "Онлайн‑курсы для профессионалов, дистанционное обучение современным ...";
-        String actualResult = driver.findElement(By.cssSelector("#r1-0>div+div span")).getText();
+        String actualResult = driver.findElement(By.cssSelector("#r1-0>div+div")).getText();
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
