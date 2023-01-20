@@ -52,7 +52,9 @@ public class MainTest {
 //2. Перейти на https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818
         driver.get("https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
         //3. Нажать на любую картинку
-        driver.findElement(By.cssSelector(".content-overlay")).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement picture = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".content-overlay")));
+        picture.click();
         //4. Проверить что картинка открылась в модальном окне
         driver.findElement(By.cssSelector(".pp_hoverContainer")).isDisplayed();
     }
@@ -74,7 +76,9 @@ public class MainTest {
 
     private void enterString() {
         String find = "ОТУС";
-        driver.findElement(By.cssSelector("#search_form_input_homepage")).sendKeys(find);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement input = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#search_form_input_homepage")));
+        input.sendKeys(find);
         driver.findElement(By.cssSelector("#search_button_homepage")).click();
     }
 

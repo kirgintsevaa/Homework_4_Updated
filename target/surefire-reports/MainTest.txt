@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: MainTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.964 s - in MainTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.42 s - in MainTest
